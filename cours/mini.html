@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 { color: #333; margin-top: 0; }
+        p { color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+        
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; color: #444; }
+        
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        
+        .radio-group { display: flex; gap: 15px; padding-top: 5px; }
+        .radio-group label { font-weight: normal; display: inline; cursor: pointer; }
+        .radio-group input { width: auto; margin-right: 5px; }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+<div>
+<br>
+<strong><em><font size="" color="#ff0099">Bonjour</font></em></strong> 
+</div>
+<div class="form-card">
+    <h2>User Information</h2>
+    <p>Please provide your details below to complete your registration. All fields are required.</p>
+
+    <form action="#" method="POST">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="25" required>
+        </div>
+
+        <!-- Language -->
+        <div class="form-group">
+            <label for="language">Preferred Language</label>
+            <input type="text" id="language" name="language" placeholder="English, French, etc." required>
+        </div>
+
+        <!-- Sex -->
+        <div class="form-group">
+            <label>Sex</label>
+            <div class="radio-group">
+                <label><input type="radio" name="sex" value="male" required> Male</label>
+                <label><input type="radio" name="sex" value="female"> Female</label>
+                <label><input type="radio" name="sex" value="other"> Other</label>
+            </div>
+        </div>
+
+        <!-- Country -->
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="USA">United States</option>
+                <option value="CAN">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="AUS">Australia</option>
+                <option value="OTHER">Other</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit Information</button>
+    </form>
+</div> 
+
+</body>
+</html>
